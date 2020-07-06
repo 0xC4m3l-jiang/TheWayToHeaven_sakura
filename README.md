@@ -1,5 +1,5 @@
 # The_way_to_heaven
-Learning 
+Learning   在 `sakura` 大学学习 冲冲冲～ 
 
 ## 1、cool compiler 学习
 
