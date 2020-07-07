@@ -18,7 +18,7 @@ Pa4。 ps:分析的[github 师傅的代码](https://github.com/ayadavumass/Under
 
 1. 在识别一个变量名时，会先便利本身的继承树里面更具，变量的名字去找是否这个变量名是否已经存在。
 
-2. 对于类的保存，采用的是 类似于 libc里面的smallbins 的结构，这样不但能记录下最基础的类的数量，也能更具这个数据结构去记录下这个类的继承类之间的关系。从而保证类的实现的完整性。![image-20200707101224742](README/image-20200707101224742.png)
+2. 对于类的保存，采用的是 类似于 libc里面的smallbins 的结构，这样不但能记录下最基础的类的数量，也能更具这个数据结构去记录下这个类的继承类之间的关系。从而保证类的实现的完整性。![image-20200707101224742](https://github.com/0xC4m3l-jiang/TheWayToHeaven_sakura/blob/master/cool_compiler/pa4/README/image-20200707101224742.png)
 
 3. 对应不同类型的变量，我们利用不同的， `Class_` 类型的  `tableclass `  来存储 `Object_class` `IO_class` `Int_class` `Bool_class ` `Str_class` 让后将定义了的 class 类型 `add` 到对应的作用域的 `class table` 里面
 
