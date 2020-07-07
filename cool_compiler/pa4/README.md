@@ -25,32 +25,34 @@ Pa4。 ps:分析的[github 师傅的代码](https://github.com/ayadavumass/Under
 4. 对于不同类型的 变量，自身就有固定的类函数，所以在初始化类的时候就要将对应的函数和变量添加进去 如：`Str_class` 下的`val` `str_field` `length() : Int` `concat(arg: Str) : Str` `substr(arg: Int, arg2: Int): Str` 然后又根据不同的类型（方法，变量，参数个数）分类添加到对应的类中。如下
 
    ```c
-       // The class Str has a number of slots and operations:
-       //       val                                  the length of the string
-       //       str_field                            the string itself
-       //       length() : Int                       returns length of the string
-       //       concat(arg: Str) : Str               performs string concatenation
-       //       substr(arg: Int, arg2: Int): Str     substring selection
-       //       
-       Class_ Str_class =
-   	class_(Str, 
-   	       Object,
-   	       append_Features(
-   			       append_Features(
-   					       append_Features(
-   							       append_Features(
-   									       single_Features(attr(val, Int, no_expr())),
-   									       single_Features(attr(str_field, prim_slot, no_expr()))),
-   							       single_Features(method(length, nil_Formals(), Int, no_expr()))),
-   					       single_Features(method(concat, 
-   								      single_Formals(formal(arg, Str)),
-   								      Str, 
-   								      no_expr()))),
-   			       single_Features(method(substr, 
-   						      append_Formals(single_Formals(formal(arg, Int)), 
-   								     single_Formals(formal(arg2, Int))),
-   						      Str, 
-   						      no_expr()))),
+   // The class Str has a number of slots and operations:
+   //       val                                  the length of the string
+   //       str_field                            the string itself
+   //       length() : Int                       returns length of the string
+   //       concat(arg: Str) : Str               performs string concatenation
+   //       substr(arg: Int, arg2: Int): Str     substring selection
+   //       
+   
+     Class_ Str_class = 
+         class_(Str, 
+   	     Object,
+                append_Features(
+                append_Features(
+                append_Features(
+                append_Features(
+                single_Features(attr(val, Int, no_expr())),
+               single_Features(attr(str_field, prim_slot, no_expr()))),
+               single_Features(method(length, nil_Formals(), Int, no_expr()))),
+               single_Features(method(concat, 
+   				   single_Formals(formal(arg, Str)),
+   				   Str, 
+   				   no_expr()))),
+   	    single_Features(method(substr, 
+   				   append_Formals(single_Formals(formal(arg, Int)), 
+   						  single_Formals(formal(arg2, Int))),
+   				   Str, 
+   				   no_expr()))),
+   	     filename);
    ```
 
 5. 一个变量的定义，我们要保存它对应的值，和保存它定义的 type ，当进行复制操作等时，要去验证 等号两边的值是否类型相同。
