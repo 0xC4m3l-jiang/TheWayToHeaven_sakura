@@ -1,0 +1,11 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/0xc3m4l/CLionProjects/llvmlearn/MyPass
+-- LLVM_HOME = /usr/local/opt/llvm
+-- LLVM_DIR = /usr/local/opt/llvm/lib/cmake/llvm
+_-------------------------------
+-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+/usr/local/opt/llvm/lib
+/usr/local/opt/llvm/include
+---------------------------------
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/cmake-build-debug

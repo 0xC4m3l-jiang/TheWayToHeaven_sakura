@@ -1,0 +1,6 @@
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/build/CMakeFiles/rebuild_cache.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/build/CMakeFiles/edit_cache.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/build/CMakeFiles/intrinsics_gen.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/build/src/CMakeFiles/rebuild_cache.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/build/src/CMakeFiles/edit_cache.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/build/src/CMakeFiles/FunctionInfo.dir

@@ -1,0 +1,3 @@
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/0xc3m4l/CLionProjects/llvmlearn/MyPass/src/cmake-build-debug/CMakeFiles/FunctionInfo.dir
