@@ -1,0 +1,40 @@
+# 表明程序开始的位置 是 0 
+    .pos 0
+    irmovq stack, %rsp  # 设置栈指针
+    call main           # 执行main函数
+    halt                # 程序停止
+
+    .align 8            # 八字节对齐
+    # 创建 3个 结构体  node1->node2->node3
+node1:  
+    .quad 0x00a
+    .quad node2
+node2:
+    .quad 0x0b0
+    .quad node3
+node3:
+    .quad 0xc00
+    .quad 0
+
+main:
+    irmovq node1, %rdi  # arg1
+    call sum_list       # call
+    pushq %rax          # 将返回值存储至栈上  函数返回值在 rax 上保存
+    ret
+
+sum_list:               
+    irmovq $0, %rax     # rax 初始化为 0
+    jmp condition
+loop:
+    mrmovq (%rdi), %rbx  # rdi->val 赋值给 rbx
+    addq %rbx, %rax      # rbx + rax
+    mrmovq 8(%rdi), %rdi # rdi = rdi+8 指向下一个 node 的地址
+condition:
+    andq %rdi, %rdi       # 设置标志位，判断ls是否等于NULL
+    jne loop
+    ret
+
+# 设置初始栈的地址  大小必须 比较大。不然会报错
+    .pos 0x1000
+    
+stack:
